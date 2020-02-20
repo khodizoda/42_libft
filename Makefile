@@ -23,7 +23,8 @@ CCFLAGS = -g -Wall -Wextra -Werror -I./libft.h
 HEADER = ./libft.h
 
 NAMES = ./ft_memset ./ft_bzero ./ft_memcpy ./ft_memccpy ./ft_memmove \
-		./ft_memchr ./ft_memcmp ./ft_strlen ./ft_strdup ./tests
+		./ft_memchr ./ft_memcmp ./ft_strlen ./ft_strdup ./ft_strcpy \
+		./ft_strncpy ./tests
 
 SRCS = $(addsuffix .c, $(NAMES))
 
