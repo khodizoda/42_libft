@@ -3,3 +3,6 @@ a.out.dSYM
 *.txt
 tests.c
 libft.a
+test
+.libft.h.swp
+.nfs.200517c1.55a9
