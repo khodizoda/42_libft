@@ -17,6 +17,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	int		pos;
 	char	*h;
 
+	pos = 0;
 	h = (char *)haystack;
 	if (!*needle)
 		return (h);
