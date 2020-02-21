@@ -17,13 +17,13 @@ char	*ft_strstr(const char *haystack, const char *needle)
 	int		pos;
 	char	*h;
 
-	pos = 0;
 	h = (char *)haystack;
 	if (!*needle)
 		return (h);
 	while (*h)
 	{
 		needle = needle - pos;
+		pos = 0;
 		while (*h == *needle)
 		{
 			h++;
