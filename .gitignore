@@ -1,6 +1,7 @@
 a.out
 a.out.dSYM
 *.txt
-tests.c
 test
 tests
+libft.a
+test.c
