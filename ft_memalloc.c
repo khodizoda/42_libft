@@ -17,18 +17,15 @@ void	*ft_memalloc(size_t size)
 	size_t			i;
 	unsigned char	*mem;
 
-	if (size > 0 && size < ULONG_MAX)
+	mem = (unsigned char *)malloc(sizeof(size + 1));
+	if (!mem)
+		return (NULL);
+	else
 	{
-		mem = (unsigned char *)malloc(sizeof(size + 1));
-		if (!mem)
-			return (NULL);
-		else
-		{
-			i = -1;
-			while (++i < size + 1)
-				mem[i] = 0;
-			return (mem);
-		}
+		i = -1;
+		while (++i < size + 1)
+			mem[i] = 0;
+		return (mem);
 	}
 	return (NULL);
 }
