@@ -21,10 +21,6 @@ int		ft_atoi(const char *str)
 	i = -1;
 	sign = 1;
 	result = 0;
-//	if (ft_strcmp(str, "99999999999999999999999999") == 0)
-//		return (-1);
-//	else if (ft_strcmp(str, "-99999999999999999999999999") == 0)
-//		return (0);
 	while ((str[++i] == ' ') || (str[i] == '\n') || (str[i] == '\t') ||
 		(str[i] == '\f') || (str[i] == '\r') || (str[i] == '\v') ||
 		((str[i] == '+') && (str[i + 1] >= '0')));
