@@ -6,7 +6,7 @@
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 20:10:07 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/18 20:53:09 by gkhodizo         ###   ########.fr       */
+/*   Updated: 2020/02/23 14:30:59 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include <stdio.h>
-# include <ctype.h>
-# include <limits.h>
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -58,5 +55,6 @@ void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
