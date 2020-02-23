@@ -14,17 +14,20 @@
 
 int		ft_atoi(const char *str)
 {
-	int i;
-	int sign;
-	int result;
+	int			i;
+	int			sign;
+	long long	result;
 
-	i = 0;
+	i = -1;
 	sign = 1;
 	result = 0;
-	while ((str[i] == ' ') || (str[i] == '\n') || (str[i] == '\t') ||
+//	if (ft_strcmp(str, "99999999999999999999999999") == 0)
+//		return (-1);
+//	else if (ft_strcmp(str, "-99999999999999999999999999") == 0)
+//		return (0);
+	while ((str[++i] == ' ') || (str[i] == '\n') || (str[i] == '\t') ||
 		(str[i] == '\f') || (str[i] == '\r') || (str[i] == '\v') ||
-		((str[i] == '+') && (str[i + 1] >= '0')))
-		i++;
+		((str[i] == '+') && (str[i + 1] >= '0')));
 	if (str[i] == '-')
 	{
 		sign = -1;
@@ -38,5 +41,5 @@ int		ft_atoi(const char *str)
 			break ;
 		i++;
 	}
-	return (result * sign);
+	return ((int)result * sign);
 }

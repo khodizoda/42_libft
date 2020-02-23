@@ -23,12 +23,12 @@ CCFLAGS = -g -Wall -Wextra -Werror -I./libft.h
 HEADER = ./libft.h
 
 NAMES = ./ft_memset ./ft_bzero ./ft_memcpy ./ft_memccpy ./ft_memmove ./ft_memchr \
-		./ft_memcmp ./ft_strlen ./ft_strdup ./ft_strcpy ./ft_strncpy ./ft_strcat \
-		./ft_strncat ./ft_strlcat ./ft_strchr ./ft_strrchr ./ft_strstr \
-		./ft_strnstr ./ft_strcmp ./ft_strncmp ./ft_atoi ./ft_isalpha ./ft_isdigit \
-		./ft_isalnum ./ft_isascii ./ft_isprint ./ft_toupper ./ft_tolower \
-		./ft_memalloc ./ft_memdel ./ft_strnew ./ft_strdel ./ft_strclr ./ft_striter \
-		./test \
+		./ft_memcmp ./ft_strlen ./ft_strdup ./ft_strcpy ./ft_strncpy \
+		./ft_strcat ./ft_strncat ./ft_strlcat ./ft_strchr ./ft_strrchr \
+		./ft_strstr ./ft_strnstr ./ft_strcmp ./ft_strncmp ./ft_atoi \
+		./ft_isalpha ./ft_isdigit ./ft_isalnum ./ft_isascii ./ft_isprint \
+		./ft_toupper ./ft_tolower ./ft_memalloc ./ft_memdel ./ft_strnew \
+		./ft_strdel ./ft_strclr ./ft_striter ./ft_striteri ./ft_strmap ./test \
 
 SRCS = $(addsuffix .c, $(NAMES))
 
@@ -50,7 +50,7 @@ exe: $(EXE)
 clean:
 	@/bin/rm -f $(OBJ)
 
-fclean:
-	@/bin/rm -rf $(NAME) $(OBJ) $(EXE) 
+fclean: clean
+	@/bin/rm -rf $(NAME) $(EXE) 
 
 re: fclean all
