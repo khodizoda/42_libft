@@ -18,12 +18,13 @@ int		ft_atoi(const char *str)
 	int			sign;
 	long long	result;
 
-	i = -1;
+	i = 0;
 	sign = 1;
 	result = 0;
-	while ((str[++i] == ' ') || (str[i] == '\n') || (str[i] == '\t') ||
+	while ((str[i] == ' ') || (str[i] == '\n') || (str[i] == '\t') ||
 		(str[i] == '\f') || (str[i] == '\r') || (str[i] == '\v') ||
-		((str[i] == '+') && (str[i + 1] >= '0')));
+		((str[i] == '+') && (str[i + 1] >= '0')))
+		i++;
 	if (str[i] == '-')
 	{
 		sign = -1;
