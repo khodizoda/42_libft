@@ -22,9 +22,9 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	i = 0;
 	len = ft_strlen(s);
 	new = (char *)malloc(sizeof(len + 1));
+	cs = (char *)s;
 	if (!new)
 		return (NULL);
-	cs = (char *)s;
 	while (s[i] != '\0')
 	{
 		new[i] = f(cs[i]);
