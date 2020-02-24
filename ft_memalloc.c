@@ -19,7 +19,7 @@ void	*ft_memalloc(size_t size)
 
 	if (size > 0 && size < ULONG_MAX)
 	{
-		mem = (unsigned char *)malloc(sizeof(size + 1));
+		mem = (unsigned char *)malloc(size * sizeof(char) + 1);
 		if (!mem)
 			return (NULL);
 		else
