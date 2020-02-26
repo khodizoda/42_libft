@@ -18,7 +18,7 @@
 
 #include "libft.h"
 
-int		int_len(int n)
+static int		int_len(int n)
 {
 	int len;
 
@@ -33,14 +33,14 @@ int		int_len(int n)
 	return (len);
 }
 
-int		to_positive(int n)
+static int		to_positive(int n)
 {
 	if (n > 0)
 		return (n);
 	return (n * (-1));
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	long	num;
 	int		len;
