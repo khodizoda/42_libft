@@ -15,9 +15,6 @@
 ** (all ending with ’\0’, including the array itself) obtained by spliting
 ** s using the character c as a delimiter.
 ** If the allocation fails the function returns NULL.
-** Example:
-** ft_strsplit("*hello*fellow***students*", ’*’)
-** returns the array ["hello", "fellow", "students"].
 */
 
 #include "libft.h"
@@ -60,16 +57,18 @@ char			**ft_strsplit(char const *s, char c)
 	i = 0;
 	if (!(arr = ft_memalloc(sizeof(char *) * (word_count(s, c) + 1))))
 		return (NULL);
-	while (*s)
+	while (*s && s)
 	{
-		if (*s != c)
+		if (*s != c && *s != '\0')
 		{
 			j = 0;
-			elem = ft_memalloc(elem_size((s + i), c));
+			elem = ft_memalloc(elem_size((s + j), c));
 			while (*s != c && *s != '\0')
 				elem[j++] = *s++;
 			ft_strcpy(arr[i++] = ft_memalloc(ft_strlen(elem)), elem);
 			free(elem);
+			if (!*s)
+				break ;
 		}
 		s++;
 	}
