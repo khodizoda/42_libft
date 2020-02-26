@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The ft_tolower() function converts an upper-case letter to the
+** corresponding lower-case letter.
+*/
+
 #include "libft.h"
 
 int		ft_tolower(int c)

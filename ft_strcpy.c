@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The ft_strcpy() functions copy the string src to dst
+** (including the terminating `\0' character.)
+** Returns dst.
+*/
+
 #include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)

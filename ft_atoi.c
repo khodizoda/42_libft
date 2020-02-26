@@ -10,13 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The ft_atoi() function converts the initial portion of the string
+** pointed to by str to int.
+** Returns int
+*/
+
 #include "libft.h"
 
 int		ft_atoi(const char *str)
 {
-	int			i;
-	int			sign;
-	long long	result;
+	int	i;
+	int	sign;
+	int	result;
 
 	i = 0;
 	sign = 1;
@@ -38,5 +44,5 @@ int		ft_atoi(const char *str)
 			break ;
 		i++;
 	}
-	return ((int)result * sign);
+	return (result * sign);
 }

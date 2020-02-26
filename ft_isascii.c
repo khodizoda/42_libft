@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The ft_isascii() function tests for an ASCII character,
+** which is any character between 0 and octal 0177 inclusive.
+*/
+
 #include "libft.h"
 
 int		ft_isascii(int c)

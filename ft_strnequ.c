@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 14:39:42 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/19 14:39:47 by gkhodizo         ###   ########.fr       */
+/*   Created: 2020/02/23 15:22:10 by gkhodizo          #+#    #+#             */
+/*   Updated: 2020/02/23 15:22:11 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** The ft_memchr() function locates the first occurrence of (unsigned char)c
-** in string s.
-** Returns a pointer to the byte located, or NULL if no such byte exists
-** within n bytes.
-*/
-
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	unsigned char	*cs;
+	char	*cs1;
+	char	*cs2;
 
-	cs = (unsigned char *)s;
-	while (n > 0)
+	cs1 = (char *)s1;
+	cs2 = (char *)s2;
+	if ((!*cs1 && !*cs2) || n == 0)
+		return (1);
+	while (((*cs1 >= 'a' && *cs1 <= 'z') || (*cs1 >= 'A' && *cs1 <= 'Z')) &&
+		((*cs2 >= 'a' && *cs2 <= 'z') || (*cs2 >= 'A' && *cs2 <= 'Z')) &&
+		n-- > 0)
 	{
-		if (*cs == (unsigned char)c)
-			return (cs);
-		cs++;
-		n--;
+		while (*cs1 == *cs2)
+		{
+			cs1++;
+			cs2++;
+			if (!*cs1 && !*cs2)
+				return (1);
+		}
 	}
-	return (NULL);
+	return (0);
 }

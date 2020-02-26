@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The ft_strcat() append a copy of the null-terminated s2 to the end of the
+** null-terminated string s1, then add a terminating `\0'. The string s1
+** must have sufficient space to hold the result.
+** Returns the pointer s1.
+*/
+
 #include "libft.h"
 
 char	*ft_strcat(char *restrict s1, const char *restrict s2)

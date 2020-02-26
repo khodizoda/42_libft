@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**The ft_strncat() function appends not more than n characters from s2,
+** and then adds a terminating `\0'.
+** Returns the pointer s1.
+*/
+
 #include "libft.h"
 
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)

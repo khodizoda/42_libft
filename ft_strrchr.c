@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The ft_strrchr() function locates the last occurrence of (unsigned char)c
+** string pointed to by s.
+** Return a pointer to the located character, or NULL if the character
+** does not appear in the string.
+*/
+
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)

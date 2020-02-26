@@ -10,24 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The ft_strdup() function allocates sufficient memory for a copy of the
+** string s1, does the copy, and returns a pointer to it. The pointer may
+** subsequently be used as an argument to the function free(3).
+** If insufficient memory is available, NULL is returned and errno is set
+** to ENOMEM.
+*/
+
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
 	size_t	i;
 	size_t	len;
-	char	*tmp;
+	char	*dup;
 
 	i = 0;
 	len = ft_strlen(s1);
-	tmp = (char *)malloc(len * sizeof(char) + 1);
-	if (!tmp)
+	dup = (char *)malloc(len * sizeof(char) + 1);
+	if (!dup)
 		return (NULL);
 	while (s1[i])
 	{
-		tmp[i] = s1[i];
+		dup[i] = s1[i];
 		i++;
 	}
-	tmp[i] = '\0';
-	return (tmp);
+	dup[i] = '\0';
+	return (dup);
 }

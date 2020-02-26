@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The ft_memset() function writes len bytes of value (unsigned char)c
+** to the string b;
+** Returns string b;
+*/
+
 #include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)

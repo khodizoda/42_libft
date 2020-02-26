@@ -10,6 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The ft_strncpy() functions copy at most len characters from src into dst.
+** If src is less than len characters long, the remainder of dst is filled
+** with `\0'. Otherwise, dst is not terminated.
+** The source and destination strings should not overlap,
+** as the behavior is undefined.
+** Returns dst.
+*/
+
 #include "libft.h"
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)

@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** The ft_isdigit() function tests for a decimal digit character.
+*/
+
 #include "libft.h"
 
 int		ft_isdigit(int c)
