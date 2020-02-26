@@ -10,28 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Lexicographical comparison between s1 and s2 up to n characters or
+** until a ’\0’ is reached. If the 2 strings are identical, the function
+** returns 1, or 0 otherwise.
+*/
+
 #include "libft.h"
 
 int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	char	*cs1;
-	char	*cs2;
-
-	cs1 = (char *)s1;
-	cs2 = (char *)s2;
-	if ((!*cs1 && !*cs2) || n == 0)
+	if (ft_strncmp(s1, s2, n) == 0)
 		return (1);
-	while (((*cs1 >= 'a' && *cs1 <= 'z') || (*cs1 >= 'A' && *cs1 <= 'Z')) &&
-		((*cs2 >= 'a' && *cs2 <= 'z') || (*cs2 >= 'A' && *cs2 <= 'Z')) &&
-		n-- > 0)
-	{
-		while (*cs1 == *cs2)
-		{
-			cs1++;
-			cs2++;
-			if (!*cs1 && !*cs2)
-				return (1);
-		}
-	}
 	return (0);
 }
