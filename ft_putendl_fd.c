@@ -10,13 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Outputs the string s to the file descriptor fd followed by a ’\n’.
+*/
+
 #include "libft.h"
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	size_t	len;
-
-	len = ft_strlen(s);
-	write(fd, s, len);
-	write(fd, "\n", 1);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

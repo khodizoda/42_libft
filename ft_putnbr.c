@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Outputs the integer n to the standard output.
+*/
+
 #include "libft.h"
 
 void	ft_putnbr(int n)

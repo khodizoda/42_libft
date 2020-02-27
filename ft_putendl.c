@@ -10,13 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Outputs the string s to the standard output followed by a ’\n’.
+*/
+
 #include "libft.h"
 
 void	ft_putendl(char const *s)
 {
-	int len;
-
-	len = ft_strlen(s);
-	write(1, s, len);
-	write(1, "\n", 1);
+	ft_putstr(s);
+	ft_putchar('\n');
 }

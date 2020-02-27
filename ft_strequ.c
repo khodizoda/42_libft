@@ -10,28 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Lexicographical comparison between s1 and s2. If the 2 strings are
+** identical the function returns 1, or 0 otherwise.
+*/
+
 #include "libft.h"
 
 int	ft_strequ(char const *s1, char const *s2)
 {
-	char *cs1;
-	char *cs2;
-
-	cs1 = (char *)s1;
-	cs2 = (char *)s2;
-	if (!*cs1 && !*cs2)
+	if (ft_strcmp(s1, s2) == 0)
 		return (1);
-	while (((*cs1 >= 'a' && *cs1 <= 'z') || (*cs1 >= 'A' && *cs1 <= 'Z')) &&
-		((*cs2 >= 'a' && *cs2 <= 'z') || (*cs2 >= 'A' && *cs2 <= 'Z')))
-	{
-		while (*cs1 == *cs2)
-		{
-			cs1++;
-			cs2++;
-			if (!*cs1 && !*cs2)
-				return (1);
-		}
-		break ;
-	}
 	return (0);
 }
