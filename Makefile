@@ -30,7 +30,7 @@ NAMES = ./ft_memset ./ft_bzero ./ft_memcpy ./ft_memccpy ./ft_memmove \
 		./ft_putstr ./ft_putendl ./ft_putnbr ./ft_putchar_fd ./ft_putstr_fd \
 		./ft_putendl_fd ./ft_putnbr_fd ./ft_lstnew ./ft_lstdelone ./ft_lstdel \
 		./ft_lstadd ./ft_lstiter ./ft_lstmap ./ft_lstaddend ./ft_lstaddafter \
-		./ft_lstlen ./ft_lstdelbegin ./ft_lstdelend \
+		./ft_lstlen ./ft_lstdelbegin ./ft_lstdelend ./ft_print_bits \
 
 SRCS = $(addsuffix .c, $(NAMES))
 

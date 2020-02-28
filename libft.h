@@ -112,5 +112,6 @@ void				ft_lstaddafter(t_list **alst, t_list *new, size_t n);
 size_t				ft_lstlen(t_list **alst);
 void				ft_lstdelbegin(t_list **alst);
 void				ft_lstdelend(t_list **alst);
+void				ft_print_bits(unsigned char octet);
 
 #endif
