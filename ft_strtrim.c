@@ -40,7 +40,7 @@ char	*ft_strtrim(char const *s)
 		begin++;
 	if (s[begin] == ' ' || s[begin] == '\t' || s[begin] == '\n')
 		begin++;
-	new = (char *)malloc(end * sizeof(char));
+	new = (char *)malloc(end * sizeof(char) + 1);
 	if (!new)
 		return (NULL);
 	while (begin <= end)
