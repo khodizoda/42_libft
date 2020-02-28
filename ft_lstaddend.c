@@ -26,4 +26,5 @@ void	ft_lstaddend(t_list **alst, t_list *new)
 	while (tmp->next != NULL)
 		tmp = tmp->next;
 	tmp->next = new;
+	new->next = NULL;
 }
