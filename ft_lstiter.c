@@ -20,12 +20,13 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	t_lst *tmp;
+	t_list *tmp;
 
+	tmp = NULL;
 	if (!lst || !f)
 		return ;
-	tmp->next = *lst;
-	while (*tmp)
+	tmp->next = lst;
+	while (tmp->next != NULL)
 	{
 		f(tmp);
 		tmp = tmp->next;

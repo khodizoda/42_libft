@@ -21,6 +21,8 @@ size_t	ft_lstlen(t_list **alst)
 	size_t len;
 	t_list *tmp;
 
+	if (!*alst || !alst)
+		return (0);
 	len = 0;
 	tmp = *alst;
 	while (tmp != 0)

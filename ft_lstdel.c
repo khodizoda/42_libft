@@ -15,22 +15,25 @@
 ** of this link and every successors of that link using the functions del and
 ** free(3). Finally the pointer to the link that was just freed must be set to
 ** NULL (quite similar to the function ft_memdel from the mandatory part).
+** Param. #1 The address of a pointer to the first link of a list that needs
+** to be freed.
 */
 
 #include "libft.h"
 
 void	ft_lstdel(t_list **alst, void (*del) (void *, size_t))
 {
-	t_list	*head;
+	t_list	*tmp;
 
 	if (!*alst || !alst || !del)
 		return ;
-	while (*alst)
+	tmp = *alst;
+	while (tmp != NULL)
 	{
-		head = (*alst)->next;
+		tmp->next = (*alst)->next;
 		del ((*alst)->content, (*alst)->content_size);
 		free (*alst);
-		alst = &head;
+		alst = NULL;
 	}
-	ft_lstdelone(alst, del);
+//	ft_lstdelone(alst, del);
 }

@@ -15,8 +15,8 @@
 ** link’s content using the function del given as a parameter, then frees the
 ** link’s memory using free(3). The memory of next must not be freed under
 ** any circumstance. Finally, the pointer to the link that was just freed
-** must be set to NULL (quite similar to the function ft_memdel in the
-** mandatory part).
+** must be set to NULL.
+** Param. #1 The adress of a pointer to a link that needs to be freed.
 */
 
 #include "libft.h"

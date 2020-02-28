@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelstart.c                                   :+:      :+:    :+:   */
+/*   ft_lstdelend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkhodizo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/27 17:45:03 by gkhodizo          #+#    #+#             */
-/*   Updated: 2020/02/27 17:45:04 by gkhodizo         ###   ########.fr       */
+/*   Created: 2020/02/27 17:53:19 by gkhodizo          #+#    #+#             */
+/*   Updated: 2020/02/27 17:53:21 by gkhodizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Deletes node from the begining of a list.
+**	Deletes node from the end of a list
 */
 
 #include "libft.h"
 
-void	ft_lstdelbegin(t_list **alst)
+void	ft_lstdelend(t_list **alst)
 {
-	t_list *tmp;
+	t_list *prev;
+	t_list *last;
 
 	if (!alst || !*alst)
 		return ;
-	if (ft_lstlen(alst) == 0)
+	last = *alst;
+	while (last->next != NULL)
+	{
+		prev = last;
+		last = last->next;
+	}
+	if (last == *alst)
 		*alst = NULL;
-	tmp = *alst;
-	*alst = (*alst)->next;
-	free(tmp);
+	else
+		prev->next = NULL;
+	free(last);
 }
