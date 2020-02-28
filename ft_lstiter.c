@@ -22,11 +22,10 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	t_list *tmp;
 
-	tmp = NULL;
 	if (!lst || !f)
 		return ;
-	tmp->next = lst;
-	while (tmp->next != NULL)
+	tmp = lst;
+	while (tmp != NULL)
 	{
 		f(tmp);
 		tmp = tmp->next;
