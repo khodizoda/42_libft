@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 /*
-** The ft_strrchr() function locates the last occurrence of (unsigned char)c
+** The ft_strrchr() function locates the last occurrence of (char)c
 ** string pointed to by s.
 ** Return a pointer to the located character, or NULL if the character
 ** does not appear in the string.
@@ -28,7 +28,7 @@ char	*ft_strrchr(const char *s, int c)
 	len = ft_strlen(s) + 1;
 	while (len-- > 0)
 	{
-		if (*(str + len) == c)
+		if (*(str + len) == (char)c)
 			return (str + len);
 	}
 	return (NULL);
