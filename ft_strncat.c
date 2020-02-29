@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 /*
-**The ft_strncat() function appends not more than n characters from s2,
+** The ft_strncat() function appends not more than n characters from s2,
 ** and then adds a terminating `\0'.
 ** Returns the pointer s1.
 */
