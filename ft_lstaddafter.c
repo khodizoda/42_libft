@@ -23,6 +23,8 @@ void	ft_lstaddafter(t_list **alst, t_list *new, size_t n)
 	size_t	i;
 	t_list	*tmp;
 
+	if (!*alst || !alst || !new || n == 0)
+		return ;
 	if (ft_lstlen(alst) < n)
 		return ;
 	else
