@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 
 /*
-** The ft_strchr() function locates the first occurrence of (unsigned char)c
+** The ft_strchr() function locates the first occurrence of (char)c
 ** string pointed to by s. The terminating null character is considered to be
-** part of the string; therefore if c is `\0', the functions locate the
-** terminating `\0'.
+** part of the string; therefore if c is '\0', the functions locate the
+** terminating '\0'.
 ** Returns a pointer to the located character, or NULL if the character does
 ** not appear in the string.
 */
